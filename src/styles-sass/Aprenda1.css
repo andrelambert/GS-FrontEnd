@@ -1,0 +1,23 @@
+.aprenda1 {
+  display: flex;
+  flex-direction: column;
+  height: 80vh;
+  align-items: center;
+  justify-content: center;
+  background-color: #fefefe;
+  color: #263243;
+}
+
+.accordionContainer {
+  width: 60%;
+  margin: 0 auto;
+  margin-top: 3em;
+  margin-bottom: 5em;
+}
+.accordionContainer .accordion-header button {
+  background-color: #263243;
+  color: #17cf97;
+}
+.accordionContainer .accordion-body {
+  color: #263243;
+}/*# sourceMappingURL=Aprenda1.css.map */
