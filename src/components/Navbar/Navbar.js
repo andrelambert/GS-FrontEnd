@@ -156,9 +156,6 @@ function Navbar() {
     display = 'none';
   };
 
-
-
-
   return (
     <>
       <NavbarContainer>
@@ -166,7 +163,7 @@ function Navbar() {
 
           <NavbarLogo to="/" onClick={closeMobileMenu}>
             <NavbarIcon />
-            Rota Sustentável
+            Global Solution
           </NavbarLogo>
 
           <MenuIcon onClick={handleClick}>
@@ -181,43 +178,6 @@ function Navbar() {
                 onClick={closeMobileMenu}
               >
                 Home
-              </NavLinks>
-            </NavItem>
-
-            <NavItem>
-              <NavLinks
-                to="/mapa"
-                onClick={closeMobileMenu}
-              >
-                Mapa
-              </NavLinks>
-            </NavItem>
-
-            <NavItem>
-              <NavLinks
-                to="/aprenda"
-                onClick={closeMobileMenu}
-              >
-                Aprenda
-              </NavLinks>
-            </NavItem>
-
-            <NavItem>
-              <NavLinks
-                to="/sobre"
-                onClick={closeMobileMenu}
-              >
-                Sobre
-              </NavLinks>
-            </NavItem>
-
-
-            <NavItem>
-              <NavLinks
-                to="/contato"
-                onClick={closeMobileMenu}
-              >
-                Contato
               </NavLinks>
             </NavItem>
 

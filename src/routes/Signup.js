@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import Input from "../Input/Input";
-import { Button } from "../Button/Button";
+import Input from "../components/Input/Input";
+import { Button } from "../components/Button/Button";
 import styled from "styled-components";
 import { Link, useNavigate } from "react-router-dom";
-import useAuth from "../../hooks/useAuth";
+import useAuth from "../hooks/useAuth";
 
 const Container = styled.div`
   display: flex;
