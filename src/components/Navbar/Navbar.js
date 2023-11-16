@@ -156,6 +156,8 @@ function Navbar() {
     display = 'none';
   };
 
+  console.log(user);
+
   return (
     <>
       <NavbarContainer>
