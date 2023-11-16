@@ -2,13 +2,13 @@ import styled, { css } from 'styled-components';
 
 export const Button = styled.button`
   cursor: pointer;
-  padding: 8px 20px;
+  padding: 8px 22px;
   border-radius: 10px;
   background: #263243;
   color: #fff;
-  border: 2px solid #fff;
+  border: 2px solid transparent;
   transition: all 0.3s ease-out;
-  font-size: 15px;
+  font-size: 17px;
 
   &:hover {
     background: #17cf97;
@@ -25,15 +25,6 @@ export const Button = styled.button`
     css`
       background: #17cf97;
       color: #242424;
-      border: 2px solid transparent;
     `};
 
-    ${props =>
-    props.$contact &&
-    css`
-      width: 150px;
-      padding: 10px;
-      margin: 30px auto;
-      font-size: 20px;
-    `};
 `;

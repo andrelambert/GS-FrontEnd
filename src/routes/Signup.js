@@ -23,24 +23,24 @@ const Content = styled.div`
   width: 100%;
   box-shadow: 2px 2px 4px 3px #ddd;
   background-color: white;
-  max-width: 450px;
-  padding: 40px;
-  border-radius: 5px;
+  max-width: 600px;
+  padding: 50px;
+  border-radius: 10px;
 `;
 
 const Label = styled.h2`
-  font-size: 2.5rem;
+  font-size: 3rem;
   color: #263243;
   margin-bottom: 0.5em;
 `;
 
 const LabelSignin = styled.label`
-  font-size: 16px;
+  font-size: 20px;
   color: #676767;
 `;
 
 const LabelError = styled.label`
-  font-size: 14px;
+  font-size: 18px;
   color: red;
 `;
 
