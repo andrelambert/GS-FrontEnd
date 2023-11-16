@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { NavLink } from "react-router-dom";
-import { FaRecycle } from "react-icons/fa";
+import { FaRainbow } from "react-icons/fa";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { Button } from '../Button/Button';
 import styled from "styled-components";
 
 const NavbarContainer = styled.nav`
-  background: #263243;
+  background: #4c1091;
   height: 85px;
   display: flex;
   justify-content: center;
@@ -43,8 +43,8 @@ const NavbarLogo = styled(Link)`
     }
 `;
 
-const NavbarIcon = styled(FaRecycle)`
-  margin-right: 0.2rem;
+const NavbarIcon = styled(FaRainbow)`
+  margin-right: 10px;
   color: #17cf97;
 `;
 
@@ -118,9 +118,9 @@ const NavLinks = styled(NavLink)`
     color: #17cf97;
     transition: all 0.3s ease;
   }
-  &.active {
-    color: #17cf97;
-  }
+  // &.active {
+  //  color: #17cf97;
+  //}
 
 `;
 
