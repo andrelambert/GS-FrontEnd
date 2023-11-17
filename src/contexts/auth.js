@@ -1,10 +1,12 @@
 import { createContext, useEffect, useState } from "react";
+import { useNavigate } from 'react-router-dom';
 import usersData from "../data/users.json"; // Importe os dados de usuário do arquivo JSON.
 
 export const AuthContext = createContext({});
 
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const userToken = localStorage.getItem("user_token");
@@ -26,6 +28,7 @@ export const AuthProvider = ({ children }) => {
         const token = Math.random().toString(36).substring(2);
         localStorage.setItem("user_token", JSON.stringify({ email, token }));
         setUser(storedUser);
+        navigate('/');
         return;
       } else {
         return "E-mail ou senha incorretos";
@@ -55,6 +58,7 @@ export const AuthProvider = ({ children }) => {
   const signout = () => {
     setUser(null);
     localStorage.removeItem("user_token");
+    navigate('/sign-in');
   };
 
   return (
