@@ -20,7 +20,7 @@ const Content = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  width: 100%;
+  width: 150%;
   box-shadow: 2px 2px 4px 3px #ddd;
   background-color: white;
   max-width: 600px;
