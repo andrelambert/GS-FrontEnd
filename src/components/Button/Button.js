@@ -16,9 +16,6 @@ export const Button = styled.button`
     border: 2px solid transparent;
     transition: 250ms;
   }
-  @media screen and (max-width: 960px) {
-    font-size: 12px;
-    }
 
   ${props =>
     props.$primary &&

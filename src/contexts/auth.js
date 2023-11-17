@@ -20,6 +20,7 @@ export const AuthProvider = ({ children }) => {
     }
   }, []);
 
+  // Função LOGIN
   const signin = (email, password) => {
     const storedUser = usersData.users.find((userData) => userData.email === email);
 
@@ -38,6 +39,7 @@ export const AuthProvider = ({ children }) => {
     }
   };
 
+// Função CADASTRO 
   const signup = (email, password) => {
     const storedUser = usersData.users.find((userData) => userData.email === email);
 
@@ -47,11 +49,7 @@ export const AuthProvider = ({ children }) => {
 
     const newUser = { email, password };
     usersData.users.push(newUser);
-
     // Atualize o arquivo JSON com o novo usuário.
-    // Certifique-se de que essa ação possa ser realizada no ambiente de desenvolvimento.
-    // Em um ambiente de produção, você usaria um servidor e um banco de dados.
-
     return;
   };
 

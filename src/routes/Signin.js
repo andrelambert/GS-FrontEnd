@@ -84,13 +84,13 @@ const Signin = () => {
         <Label>LOGIN</Label>
           <Input
             type="email"
-            placeholder="Digite seu email"
+            placeholder="Seu email"
             value={email}
             onChange={(e) => [setEmail(e.target.value), setError("")]}
           />
           <Input
             type="password"
-            placeholder="Digite sua senha"
+            placeholder="Sua senha"
             value={senha}
             onChange={(e) => [setSenha(e.target.value), setError("")]}
           />

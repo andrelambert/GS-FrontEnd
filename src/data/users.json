@@ -1,7 +1,7 @@
 {
     "users": [
-      { "email": "andreflambert@gmail.com", "password": "12345" },
-      { "email": "vitorgbs.maia@gmail.com", "password": "12345" }
+      { "name": "André", "email": "andreflambert@gmail.com", "password": "12345" },
+      { "name": "Vitor",  "email": "vitorgbs.maia@gmail.com", "password": "12345" }
     ]
   }
   
