@@ -3,8 +3,9 @@ import { Route, Routes, Navigate } from 'react-router-dom';
 import { AuthProvider} from "./contexts/auth";
 import useAuth from "./hooks/useAuth";
 
-// Importando componente Navbar
+// Importando componentes Navbar e Footer
 import Navbar from "./components/Navbar/Navbar";
+import Footer from "./components/Footer/Footer";
 
 // Importando Páginas (Routes)
 import Home from "./routes/Home";
@@ -37,6 +38,7 @@ const App = () => {
           <Route path="/sign-up" element={<Signup />} />
           <Route path="/" element={<PrivateRoute element={<Home />} />} />
         </Routes>
+        <Footer />
       </>
     </AuthProvider>  
   );

@@ -40,7 +40,6 @@ const NavbarLogo = styled(Link)`
 `;
 
 const NavbarIcon = styled(FaAsterisk)`
-  margin-right: 10px;
   color: #17cf97;
 `;
 
