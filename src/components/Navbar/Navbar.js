@@ -162,7 +162,7 @@ function Navbar() {
 
           <NavbarLogo to="/" onClick={closeMobileMenu}>
             <NavbarIcon />
-            ID Médico
+            MedConnect
           </NavbarLogo>
 
           <MenuIcon onClick={handleClick}>

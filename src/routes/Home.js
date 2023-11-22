@@ -10,12 +10,12 @@ function HomePage() {
 
       <section className="intro-section">
         <p>
-          Bem-vindo ao ID Médico, a revolução na gestão de informações médicas.
+          Bem-vindo à MedConnect, a revolução na gestão de informações médicas.
           Compreendemos os desafios enfrentados por médicos e pacientes na
           transferência de históricos médicos, e é por isso que desenvolvemos
           uma solução inovadora para facilitar esse processo. Seja para pacientes
           que desejam ter controle total sobre seu histórico ou profissionais de
-          saúde em busca de eficiência, o ID Médico é a resposta.
+          saúde em busca de eficiência, MedConnect é a resposta.
         </p>
       </section>
 
@@ -56,7 +56,7 @@ function HomePage() {
       <section className="efficiency-section">
         <h2>Compromisso com a Eficiência</h2>
         <p>
-          O ID Médico não é apenas uma solução para transferência de históricos
+          MedConnect não é apenas uma solução para transferência de históricos
           médicos, mas um passo à frente na busca por eficiência e agilidade no
           ambiente médico. Contribua para um atendimento mais efetivo, onde a
           informação flui de maneira rápida e segura, proporcionando o melhor
