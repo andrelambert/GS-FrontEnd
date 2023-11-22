@@ -103,6 +103,16 @@ const NavItem = styled.li`
   }
 `;
 
+const NavItemApelido = styled.li`
+  height: 85px;
+  border-bottom: 2px solid transparent;
+
+  @media screen and (max-width: 960px) {
+    position: relative;
+
+  }
+`;
+
 const NavLinks = styled(NavLink)`
   color: #fff;
   display: flex;
@@ -189,11 +199,11 @@ function Navbar() {
               </NavLinks>
             </NavItem>
 
-            <NavItem>
-              <NavLinks style={{display: display}}>
-                {apelido}
-              </NavLinks>
-            </NavItem>
+            <NavItemApelido>
+                <div style={{display: display, color: '#fff', alignItems: 'center', padding: '0.5rem 1rem', height: '100%'}}>
+                  {apelido}
+                </div>
+            </NavItemApelido>
 
           </NavMenu>
         </NavbarContent>
