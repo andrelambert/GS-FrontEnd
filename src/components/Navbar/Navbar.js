@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { NavLink } from "react-router-dom";
-import { FaRainbow } from "react-icons/fa";
+import { FaAsterisk } from "react-icons/fa";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { Button } from '../Button/Button';
 import styled from "styled-components";
@@ -39,7 +39,7 @@ const NavbarLogo = styled(Link)`
   align-items: center;
 `;
 
-const NavbarIcon = styled(FaRainbow)`
+const NavbarIcon = styled(FaAsterisk)`
   margin-right: 10px;
   color: #17cf97;
 `;
@@ -147,6 +147,7 @@ function Navbar() {
     texto = "Logout";
     display = 'flex';
     apelido = 'Bem vindo, ' + JSON.parse(userToken)?.email.split("@")[0] + '!';
+                          
   } else {
     texto = "Login";
     display = 'none';
@@ -161,7 +162,7 @@ function Navbar() {
 
           <NavbarLogo to="/" onClick={closeMobileMenu}>
             <NavbarIcon />
-            Global Solution
+            ID Médico
           </NavbarLogo>
 
           <MenuIcon onClick={handleClick}>

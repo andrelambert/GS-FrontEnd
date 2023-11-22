@@ -29,7 +29,8 @@ export const AuthProvider = ({ children }) => {
         const token = Math.random().toString(36).substring(2);
         localStorage.setItem("user_token", JSON.stringify({ email, token }));
         setUser(storedUser);
-        navigate('/');
+        // Ir para home - não está funcionando 
+        // navigate('/');
         return;
       } else {
         return "E-mail ou senha incorretos";
@@ -47,9 +48,6 @@ export const AuthProvider = ({ children }) => {
       return "Já tem uma conta com esse E-mail";
     }
 
-    const newUser = { email, password };
-    usersData.users.push(newUser);
-    // Atualize o arquivo JSON com o novo usuário.
     return;
   };
 
