@@ -54,25 +54,24 @@ const Strong = styled.strong`
 `;
 
 const Signup = () => {
-  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+  const [emailConf, setEmailConf] = useState("");
   const [senha, setSenha] = useState("");
-  const [senhaConf, setSenhaConf] = useState("");
   const [error, setError] = useState("");
   const navigate = useNavigate();
 
   const { signup } = useAuth();
 
   const handleSignup = () => {
-    if (!name | !email | !senha) {
+    if (!email | !emailConf | !senha) {
       setError("Preencha todos os campos");
       return;
-    } else if (senha !== senhaConf) {
-      setError("As senhas não são iguais");
+    } else if (email !== emailConf) {
+      setError("Os e-mails não são iguais");
       return;
     }
 
-    const res = signup(name, email, senha);
+    const res = signup(email, senha);
 
     if (res) {
       setError(res);
@@ -89,28 +88,22 @@ const Signup = () => {
       <Content>
       <Label>CADASTRO</Label>
         <Input
-          type="name"
-          placeholder="Seu nome"
-          value={name}
-          onChange={(e) => [setName(e.target.value), setError("")]}
-        />
-        <Input
           type="email"
-          placeholder="Seu e-mail"
+          placeholder="Digite seu e-mail"
           value={email}
           onChange={(e) => [setEmail(e.target.value), setError("")]}
         />
         <Input
-          type="password"
-          placeholder="Crie uma senha"
-          value={senha}
-          onChange={(e) => [setSenha(e.target.value), setError("")]}
+          type="email"
+          placeholder="Confirme seu e-mail"
+          value={emailConf}
+          onChange={(e) => [setEmailConf(e.target.value), setError("")]}
         />
         <Input
           type="password"
-          placeholder="Confirme sua senha"
-          value={senhaConf}
-          onChange={(e) => [setSenhaConf(e.target.value), setError("")]}
+          placeholder="Digite sua senha"
+          value={senha}
+          onChange={(e) => [setSenha(e.target.value), setError("")]}
         />
         <LabelError>{error}</LabelError>
         <Button onClick={handleSignup} >Registrar</Button>

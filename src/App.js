@@ -2,16 +2,19 @@ import React from 'react';
 import { Route, Routes, Navigate } from 'react-router-dom';
 import { AuthProvider} from "./contexts/auth";
 import useAuth from "./hooks/useAuth";
+
 // Importando componente Navbar
 import Navbar from "./components/Navbar/Navbar";
+
 // Importando Páginas (Routes)
 import Home from "./routes/Home";
 import Error from "./routes/Error"
 import Signup from "./routes/Signup";
 import Signin from "./routes/Signin";
+
 // Importando CSS
 import "./App.css"; // 
-// import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const PrivateRoute = ({ element, ...rest }) => {
   const auth = useAuth();
