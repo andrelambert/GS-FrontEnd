@@ -5,8 +5,7 @@ function HomePage() {
   return (
     <div className="homepage">
       <header className="header">
-        <h1>ID Médico</h1>
-        <p>Sua Saúde na Ponta dos Dedos</p>
+        <h1>Sua Saúde na Ponta dos Dedos</h1>
       </header>
 
       <section className="intro-section">
