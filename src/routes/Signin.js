@@ -56,16 +56,16 @@ const Signin = () => {
   const navigate = useNavigate();
 
   const [email, setEmail] = useState("");
-  const [senha, setSenha] = useState("");
+  const [password, setPassword] = useState("");
   const [error, setError] = useState("");
 
   const handleLogin = () => {
-    if (!email | !senha) {
+    if (!email | !password) {
       setError("Preencha todos os campos");
       return;
     }
 
-    const res = signin(email, senha);
+    const res = signin(email, password);
 
     if (res) {
       setError(res);
@@ -89,9 +89,9 @@ const Signin = () => {
           />
           <Input
             type="password"
-            placeholder="Digite sua senha"
-            value={senha}
-            onChange={(e) => [setSenha(e.target.value), setError("")]}
+            placeholder="Digite sua password"
+            value={password}
+            onChange={(e) => [setPassword(e.target.value), setError("")]}
           />
           <LabelError>{error}</LabelError>
           <Button onClick={handleLogin} >Entrar</Button>

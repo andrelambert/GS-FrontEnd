@@ -55,14 +55,14 @@ const Strong = styled.strong`
 const Signup = () => {
   const [email, setEmail] = useState("");
   const [emailConf, setEmailConf] = useState("");
-  const [senha, setSenha] = useState("");
+  const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const navigate = useNavigate();
 
   const { signup } = useAuth();
 
   const handleSignup = () => {
-    if (!email | !emailConf | !senha) {
+    if (!email || !emailConf || !password) {
       setError("Preencha todos os campos");
       return;
     } else if (email !== emailConf) {
@@ -70,15 +70,15 @@ const Signup = () => {
       return;
     }
 
-    const res = signup(email, senha);
-
-    if (res) {
-      setError(res);
-      return;
-    }
-
-    alert("Usuário cadatrado com sucesso!");
-    navigate("/");
+    signup(email, password)
+      .then(() => {
+        console.log('Usuário cadastrado com sucesso!');
+        alert('Usuário cadastrado com sucesso!');
+        navigate('/');
+      })
+      .catch((error) => {
+        setError(error);
+      });
   };
 
   return (
@@ -100,9 +100,9 @@ const Signup = () => {
         />
         <Input
           type="password"
-          placeholder="Digite sua senha"
-          value={senha}
-          onChange={(e) => [setSenha(e.target.value), setError("")]}
+          placeholder="Digite sua password"
+          value={password}
+          onChange={(e) => [setPassword(e.target.value), setError("")]}
         />
         <LabelError>{error}</LabelError>
         <Button onClick={handleSignup} >Registrar</Button>

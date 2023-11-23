@@ -1,5 +1,6 @@
 import { createContext, useEffect, useState } from "react";
 import usersData from "../data/users.json"; // Importe os dados de usuário do arquivo JSON.
+import axios from "axios";
 
 export const AuthContext = createContext({});
 
@@ -26,12 +27,12 @@ export const AuthProvider = ({ children }) => {
         const token = Math.random().toString(36).substring(2);
         localStorage.setItem("user_token", JSON.stringify({ email, token }));
         setUser(storedUser);
-        return;
+        return Promise.resolve(); // Resolva a Promise em caso de sucesso
       } else {
-        return "E-mail ou senha incorretos";
+        return Promise.reject("E-mail ou senha incorretos"); // Rejeite a Promise em caso de erro
       }
     } else {
-      return "Usuário não cadastrado";
+      return Promise.reject("Usuário não cadastrado"); // Rejeite a Promise em caso de erro
     }
   };
 
@@ -39,17 +40,27 @@ export const AuthProvider = ({ children }) => {
     const storedUser = usersData.users.find((userData) => userData.email === email);
 
     if (storedUser) {
-      return "Já tem uma conta com esse E-mail";
+      return Promise.reject("Já tem uma conta com esse E-mail");
     }
 
     const newUser = { email, password };
-    usersData.users.push(newUser);
 
-    // Atualize o arquivo JSON com o novo usuário.
-    // Certifique-se de que essa ação possa ser realizada no ambiente de desenvolvimento.
-    // Em um ambiente de produção, você usaria um servidor e um banco de dados.
+    // Faz uma solicitação POST para adicionar o novo usuário usando Axios
+    return axios.post('http://localhost:8000/users', newUser)
+      .then((response) => {
+        // Atualiza o estado do usuário no contexto, se necessário
+        setUser(newUser);
 
-    return;
+        console.log('Resposta do servidor:', response.data);
+
+        // Resolva a Promise em caso de sucesso
+        return Promise.resolve({ email, password });
+      })
+      .catch((error) => {
+        console.error('Erro ao adicionar usuário:', error.message);
+        // Rejeite a Promise em caso de erro
+        return Promise.reject('Erro ao adicionar usuário');
+      });
   };
 
   const signout = () => {
