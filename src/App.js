@@ -15,7 +15,6 @@ import Signin from "./routes/Signin";
 
 // Importando CSS
 import "./App.css"; // 
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 const PrivateRoute = ({ element, ...rest }) => {
   const auth = useAuth();
