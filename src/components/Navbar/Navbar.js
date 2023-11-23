@@ -23,11 +23,10 @@ const NavbarContent = styled.div`
   height: 0px;
   z-index: 1;
   width: 100%;
-  max-width: 1300px;
+  max-width: 100%;
   margin-right: auto;
   margin-left: auto;
-  padding-right: 30px;
-  padding-left: 30px;
+  padding-right: 50px;
 `
 const NavbarLogo = styled(Link)`
   color: #17cf97;
