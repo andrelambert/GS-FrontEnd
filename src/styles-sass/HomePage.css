@@ -1,0 +1,70 @@
+.homepage {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #fefefe;
+}
+
+.header {
+  color: #17cf97;
+  padding: 20px;
+  text-align: center;
+}
+.header h1 {
+  font-size: 2em;
+  margin: 0;
+}
+.header p {
+  margin-top: 10px;
+}
+
+.intro-section {
+  padding: 20px;
+}
+.intro-section p {
+  line-height: 1.5;
+}
+
+.highlight-section {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+.highlight-section .patient-highlight,
+.highlight-section .healthcare-professional-highlight {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #17cf97;
+  border-radius: 5px;
+  margin: 0 10px;
+}
+.highlight-section .patient-highlight h2,
+.highlight-section .healthcare-professional-highlight h2 {
+  color: #17cf97;
+}
+.highlight-section .patient-highlight p,
+.highlight-section .healthcare-professional-highlight p {
+  margin-top: 10px;
+}
+
+.efficiency-section {
+  padding: 20px;
+}
+
+.cta-section {
+  background-color: #4c1091;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+.cta-section p {
+  margin-bottom: 20px;
+}
+.cta-section .cta-button {
+  background-color: #17cf97;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}/*# sourceMappingURL=HomePage.css.map */

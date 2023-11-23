@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { NavLink } from "react-router-dom";
-import { FaRainbow } from "react-icons/fa";
+import { FaAsterisk } from "react-icons/fa";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { Button } from '../Button/Button';
 import styled from "styled-components";
@@ -23,11 +23,10 @@ const NavbarContent = styled.div`
   height: 0px;
   z-index: 1;
   width: 100%;
-  max-width: 1300px;
+  max-width: 100%;
   margin-right: auto;
   margin-left: auto;
-  padding-right: 30px;
-  padding-left: 30px;
+  padding-right: 50px;
 `
 const NavbarLogo = styled(Link)`
   color: #17cf97;
@@ -37,14 +36,9 @@ const NavbarLogo = styled(Link)`
   font-size: 2rem;
   display: flex;
   align-items: center;
-
-  @media screen and (max-width: 960px) {
-    font-size: 1.5rem;
-    }
 `;
 
-const NavbarIcon = styled(FaRainbow)`
-  margin-right: 10px;
+const NavbarIcon = styled(FaAsterisk)`
   color: #17cf97;
 `;
 
@@ -107,6 +101,16 @@ const NavItem = styled.li`
   }
 `;
 
+const NavItemApelido = styled.li`
+  height: 85px;
+  border-bottom: 2px solid transparent;
+
+  @media screen and (max-width: 960px) {
+    position: relative;
+
+  }
+`;
+
 const NavLinks = styled(NavLink)`
   color: #fff;
   display: flex;
@@ -151,6 +155,7 @@ function Navbar() {
     texto = "Logout";
     display = 'flex';
     apelido = 'Bem vindo, ' + JSON.parse(userToken)?.email.split("@")[0] + '!';
+                          
   } else {
     texto = "Login";
     display = 'none';
@@ -165,7 +170,7 @@ function Navbar() {
 
           <NavbarLogo to="/" onClick={closeMobileMenu}>
             <NavbarIcon />
-            Global Solution
+            MedConnect
           </NavbarLogo>
 
           <MenuIcon onClick={handleClick}>
@@ -192,11 +197,11 @@ function Navbar() {
               </NavLinks>
             </NavItem>
 
-            <NavItem>
-              <NavLinks style={{display: display}}>
-                {apelido}
-              </NavLinks>
-            </NavItem>
+            <NavItemApelido>
+                <div style={{display: display, color: '#fff', alignItems: 'center', padding: '0.5rem 1rem', height: '100%'}}>
+                  {apelido}
+                </div>
+            </NavItemApelido>
 
           </NavMenu>
         </NavbarContent>
