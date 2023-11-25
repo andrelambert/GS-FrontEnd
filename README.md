@@ -11,9 +11,14 @@ A estilização utiliza de styled-components, css e scss e é responsiva à dife
 # Resumo do projeto
 O nosso projeto, intitulado "MedConnect", visa criar uma aplicação web e mobile. Nele, os usuários podem cadastrar todo o seu histórico médico relevante, incluindo exames, e compartilhar essas informações com o profissional de saúde de sua escolha. Essa abordagem simplifica significativamente a transição da ficha médica de um paciente para um novo profissional, agilizando o processo de consulta e aprimorando o atendimento.
 
+# Usuário e senha para teste
+Para testes, você pode utilizar o email "teste@gmail.com" e a senha "12345".
+Após isso a private route "home" será liberada.
+Tivemos dificuldade em terminar a implementação do cadastro utilizando json-server que gravasse no arquivo users.db 
+
 # Instruções
 ## Demo via browser
-Deploy do projeto via Netlify: 
+Deploy do projeto via Netlify: medconnectgs.netlify.app
 
 ## Instalação local
 Primeiramente, é necessário ter o [Node.js](https://nodejs.org/en) instalado em sua máquina.
@@ -28,9 +33,6 @@ Seguido pelo comando:
 ```
 npm start
 ``` 
-
-## Usuário e senha 
-Para testes, você pode utilizar o email "teste@gmail.com" e a senha "12345".
 
 # Grupo  
 <li>André Lambert (RM99148) - 1ESPW</li>
