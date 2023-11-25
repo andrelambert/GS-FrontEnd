@@ -18,7 +18,7 @@ Tivemos dificuldade em terminar a implementação do cadastro utilizando json-se
 
 # Instruções
 ## Demo via browser
-Deploy do projeto via Netlify: medconnectgs.netlify.app
+[Deploy do projeto via Netlify](https://medconnectgs.netlify.app/)
 
 ## Instalação local
 Primeiramente, é necessário ter o [Node.js](https://nodejs.org/en) instalado em sua máquina.
